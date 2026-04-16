@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Zackaria MANE</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS Externe -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Modal customizations */
+        .modal-content {
+            border-radius: 20px;
+            border: 1px solid rgba(94, 53, 177, 0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Ensure glass-card inside modal doesn't have white on white issues if needed */
+        .modal .glass-card {
+            background-color: var(--surface-light);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -40%" tabindex="0">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <span class="text-gradient fw-bold">Zackaria MANE</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-1 text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="hero" class="hero">
+        <div class="container relative z-1">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 animate-on-scroll">
+                    <h1 class="display-3 fw-bold mb-3 text-dark">Zackaria MANE</h1>
+                    <h3 class="h4 mb-4" style="color: var(--primary-color); line-height: 1.5;">Étudiant en Licence Professionnelle Génie Géomatique pour l'Aménagement du Territoire</h3>
+                    <p class="lead mt-4 mb-5" style="font-style: italic; color: var(--text-muted);">"Aménager un territoire, c'est d'abord le comprendre ; la géomatique en est la clé."</p>
+                    <a href="#projects" class="btn-custom">Explorer les projets <i class="bi bi-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- À propos de moi Section -->
+    <section id="about" class="section-pad" style="background-color: var(--surface-light);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 animate-on-scroll">
+                    <h2 class="section-title">A propos de moi</h2>
+                </div>
+                <div class="col-lg-7 animate-on-scroll delay-100">
+                    <div class="glass-card">
+                        <p class="fs-5">Étudiant en Licence Professionnelle Génie Géomatique pour l'Aménagement du Territoire, je m'intéresse à l'analyse spatiale et à la cartographie appliquées aux enjeux territoriaux.</p>
+                        <p class="text-muted mb-0">À travers mes projets académiques, j'ai développé des compétences en SIG, traitement de données géographiques et production de cartes d'aide à la décision dans les domaines de l'urbanisme, de l'environnement et du développement territorial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les Projets réalisés Section (Grid) -->
+    <section id="projects" class="section-pad">
+        <div class="container">
+            <div class="text-center mb-5 animate-on-scroll">
+                <h2 class="section-title">Les Projets réalisés</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Projet 1 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image1.png" alt="Aperçu Micrositing éolien" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 1 : Micrositing éolien avec QGIS</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet1">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-100">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image2-1.png" alt="Aperçu Analyses des zones inondables" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 2 : Analyses des zones inondables</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet2">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-200">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image3-1.png" alt="Aperçu Levé topographique" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 3 : Levé topographique</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet3">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image4-1.png" alt="Aperçu Créer de la donnée" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 4 : Créer de la donnée et comparer des évolutions</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet4">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-100">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image5-1.png" alt="Aperçu projet d'implantation" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 5 : Créer une carte nommée « projet d'implantation »</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet5">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-200">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image6-1.png" alt="Aperçu ArcGIS Online" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 6 : ArcGIS Online</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet6">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 7 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-200">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image7-1.png" alt="Analyse de l'offre cyclable à Massy" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 7 : Analyse de l'offre cyclable à Massy </h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet7">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 8 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-200">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image8-1.png" alt="Îlots de chaleurs en milieu urbain (ICU) - Impact d’une tour végétalisée sur le bien être thermique des habitants." class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 8 : Îlots de chaleurs en milieu urbain (ICU) - Impact d’une tour végétalisée sur le bien être thermique des habitants. </h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet8">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 9 Card -->
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-200">
+                    <div class="glass-card d-flex flex-column h-100 p-4">
+                        <figure class="mb-3">
+                            <img src="image9-1.png" alt="Relief et réseau hydrographique du Gers" class="img-fluid rounded shadow-sm img-placeholder">
+                        </figure>
+                        <h3 class="h5 mb-4" style="color: var(--primary-color);">Projet 9 : Relief et réseau hydrographique du Gers</h3>
+                        <div class="mt-auto">
+                            <button class="btn-custom w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#modalProjet9">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALS DOMAINS -->
+
+    <!-- Modal Projet 1 -->
+    <div class="modal fade" id="modalProjet1" tabindex="-1" aria-labelledby="modalProjet1Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet1Title">Projet 1 : Projet Micrositing éolien avec QGIS</h2>
+                    <p>Ce projet de micrositing a pour objectif de repérer, à l'intérieur de la zone d'étude, les secteurs les plus adaptés pour implanter au moins cinq éoliennes, en croisant plusieurs types de critères.</p>
+                    <p>Concrètement, il s'agit de produire un atlas de cartes qui tient compte à la fois des règles à respecter (proximité des habitations, patrimoine, espaces naturels protégés), des caractéristiques physiques du terrain (relief, hydrographie, pentes) et des parcs éoliens déjà présents.</p>
+                    <p>L'ensemble aboutit à une cartographie d'aide à la décision, pensée comme un outil opérationnel pour orienter les choix d'aménagement du territoire en matière d'énergie éolienne.</p>
+                    
+                    <div class="row g-4 grid-images my-5">
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image2.png" alt="Carte de localisation de la zone d'étude" class="img-fluid rounded shadow-sm img-placeholder" title="Carte de localisation de la zone d'étude">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image3.png" alt="Carte des zones habitées" class="img-fluid rounded shadow-sm img-placeholder" title="Carte des zones habitées">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image4.png" alt="Carte du patrimoine protégé" class="img-fluid rounded shadow-sm img-placeholder" title="Carte du patrimoine protégé">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image5.png" alt="Carte des zonages naturels" class="img-fluid rounded shadow-sm img-placeholder" title="Carte des zonages naturels">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image6.png" alt="Carte du contexte éolien" class="img-fluid rounded shadow-sm img-placeholder" title="Carte du contexte éolien">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image7.png" alt="Carte du relief et hydrographie" class="img-fluid rounded shadow-sm img-placeholder" title="Carte du relief et hydrographie">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image8.png" alt="Carte des pentes" class="img-fluid rounded shadow-sm img-placeholder" title="Carte des pentes">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image9.png" alt="Carte de synthèse des contraintes" class="img-fluid rounded shadow-sm img-placeholder" title="Carte de synthèse des contraintes">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <figure class="mb-0">
+                                <img src="image10.png" alt="Carte de localisation des éoliennes sur l'ère d'étude" class="img-fluid rounded shadow-sm img-placeholder" title="Carte de localisation des éoliennes sur l'ère d'étude">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mx-auto">
+                            <figure class="mb-0">
+                                <img src="image11.png" alt="Carte de visibilité" class="img-fluid rounded shadow-sm img-placeholder" title="Carte de visibilité">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                
+                    <p>Cette carte de visibilité met en évidence les communes où l'impact paysager des éoliennes est le plus marqué. Les secteurs en jaune montrent des zones fortement exposées, où les éoliennes sont souvent perçues, alors que les parties en vert restent relativement moins sensibles visuellement. On voit ainsi que le cœur de la zone d'étude autour du parc éolien concentre les plus fortes valeurs de visibilité, ce qui en fait un enjeu paysager majeur à prendre en compte dans le projet d'aménagement.</p>
+                
+                    <div class="conclusion-box">
+                        <h4 class="mb-3">Conclusion</h4>
+                        <p>Les cartes mettent en évidence un territoire globalement très contraint pour l'implantation de nouvelles éoliennes.</p>
+                        <p>La confrontation des contraintes humaines (zones habitées, patrimoine), environnementales (zones naturelles protégées, cours d'eau), topographiques (pentes, relief) et du contexte éolien existant fait apparaître une large domination des zones d'exclusion ou de fortes contraintes, et seulement quelques secteurs ponctuels réellement favorables.</p>
+                        <p class="mb-0">L'analyse de la visibilité montre par ailleurs que ces secteurs favorables peuvent générer un impact paysager significatif pour Certaines communes, ce qui invite à une implantation très ciblée, limitée à quelques sites où les enjeux réglementaires, environnementaux et visuels restent acceptables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 2 -->
+    <div class="modal fade" id="modalProjet2" tabindex="-1" aria-labelledby="modalProjet2Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet2Title">Projet 2 : Analyses des zones inondables</h2>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <p>La commune de Gimont dispose d'un PPRI = Plan de Prévention des Risques Inondations</p>
+                            <p>Pour les services de sécurité, notamment le SDIS 32, le périmètre du PPRI n'est pas une information assez précise, ils ont besoin de connaître les hauteurs d'eau par secteur => les bâtiments et réseaux impactés et à quel niveau.</p>
+                            <p>Nous allons modéliser, à partir d'un MNT précis, les hauteurs d'eau possibles par secteur du PPRI et déterminer l'impact d'une inondation centennale sur l'habitat.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <figure class="mb-0">
+                                <img src="image2-2.png" alt="Carte des hauteurs d'eaux et impact sur le bati-PPRI de GIMONT" class="img-fluid rounded shadow-sm img-placeholder">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 3 -->
+    <div class="modal fade" id="modalProjet3" tabindex="-1" aria-labelledby="modalProjet3Title" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2 text-center">
+                    <h2 class="mb-4 text-gradient" id="modalProjet3Title">Projet 3 : Levé topographique</h2>
+                    <p class="fs-5 mb-4">Levée GPS au Parc Couloumé: Cartographie des aménagements et végétations</p>
+                    <figure class="mb-0">
+                        <img src="image3-2.png" alt="Carte du Parc Couloumé" class="img-fluid rounded shadow-sm img-placeholder mx-auto">
+                        <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 4 -->
+    <div class="modal fade" id="modalProjet4" tabindex="-1" aria-labelledby="modalProjet4Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet4Title">Projet 4 : Créer de la donnée et comparer des évolutions</h2>
+                    
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-lg-6">
+                            <p class="fw-bold mb-2">Objectif:</p>
+                            <p>Faire une analyse de l'évolution de l'occupation du sol sur une partie de la commune du Séquestre entre 1989 et nos jours.</p>
+                            <p>Pour cette analyse, il faudra définir :</p>
+                            <ul class="custom-list mb-4">
+                                <li>les zones qui étaient déjà construites en 1989 et les zones qui l'ont été entre 1989 et aujourd'hui ;</li>
+                                <li>les routes qui étaient déjà construites en 1989 et les routes qui l'ont été entre 1989 et aujourd'hui ;</li>
+                            </ul>
+                            <p>L'augmentation en pourcentage de la surface des zones urbanisées et du linéaire de route entre 1989 et aujourd'hui</p>
+                        </div>
+                        
+                        <div class="col-lg-6 mt-4 mt-lg-0">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="stat-card">
+                                        <span class="stat-label"><i class="bi bi-signpost-split me-2"></i>Linéaire de route</span>
+                                        <p class="mb-1 text-muted small">1989 : 11 453m</p>
+                                        <p class="mb-2 text-muted small">Actuel : <span class="fw-bold" style="color: var(--text-main);">16 492m</span></p>
+                                        <div class="stat-diff"><i class="bi bi-arrow-up-right-circle-fill"></i> Augmentation : 44%</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="stat-card">
+                                        <span class="stat-label"><i class="bi bi-buildings me-2"></i>Surface urbanisée</span>
+                                        <p class="mb-1 text-muted small">1989 : 43.4 ha</p>
+                                        <p class="mb-2 text-muted small">Actuelle : <span class="fw-bold" style="color: var(--text-main);">78.41 ha</span></p>
+                                        <div class="stat-diff"><i class="bi bi-arrow-up-right-circle-fill"></i> Augmentation : 81%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <figure class="mb-0">
+                                <img src="image4-2.png" alt="Évolution de l'urbanisation" class="img-fluid rounded shadow-sm img-placeholder">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 5 -->
+    <div class="modal fade" id="modalProjet5" tabindex="-1" aria-labelledby="modalProjet5Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet5Title">Projet 5 : Créer une carte nommée « projet d'implantation » sous ArcGIS PRO</h2>
+                    
+                    <div class="row align-items-start mb-4">
+                        <div class="col-lg-6">
+                            <p>La mairie souhaite trouver un terrain pour réaliser un nouveau projet de création de crèche.<br>
+                            Par terrain, il est question de parcelle cadastrale. La parcelle peut être entière ou découpée.<br>
+                            L'idée est d'identifier les parties de parcelles ou parcelles entières qui correspondent aux critères pour ensuite contacter les propriétaires et leur faire une proposition financière.</p>
+                            
+                            <p class="fw-bold mt-4">Voici les critères :</p>
+                            <ul class="custom-list mb-4">
+                                <li>Le terrain doit être à plus de 30m d'un axe de voie</li>
+                                <li>Le terrain doit être à plus de 80 m de l'axe de la voie ferrée.</li>
+                                <li>Le terrain doit être à plus de 10 m des bâtiments.</li>
+                                <li>Le terrain doit faire plus de 1000m². Avant de faire ce tri par superficie, pensez à éclater les entités (utiliser les outils de mises à jour) pour ne pas avoir de multi polygones.</li>
+                                <li>Le terrain doit être en zone 1AU du zonage du PLU</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="glass-card shadow-sm border-0">
+                                <h4 class="mb-4" style="color: var(--accent-color);">Réponse :</h4>
+                                <ol class="step-list mb-0">
+                                    <li>On répond à la demande de la mairie en traduisant ses contraintes (zonage, distances, superficie minimale) en opérations SIG pour isoler seulement les terrains compatibles avec l'implantation d'une crèche.</li>
+                                    <li>On commence par limiter l'analyse à la zone 1AU on croise (Intersect) les parcelles avec ce zonage pour ne garder que les morceaux de parcelles situés dans le secteur urbanisable.</li>
+                                    <li>On crée ensuite des zones à éviter autour des routes, de la voie ferrée et des bâtiments en générant des buffers de 30 m, 80 m et 10 m, puis on les fusionne pour obtenir une seule couche de « zone interdite ».</li>
+                                    <li>On soustrait ces zones interdites aux parcelles en 1AU avec l'outil Erase, ce qui ne laisse que les parties de parcelles qui respectent les distances minimales vis-à-vis des infrastructures.</li>
+                                    <li>On calcule enfin la surface de chaque polygone, on garde uniquement ceux qui dépassent 1000 m² et on les enregistre dans la couche « Projet_implantation », qui correspond à la liste finale des terrains réellement envisageables pour la crèche.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 text-center">
+                            <figure class="mb-0">
+                                <img src="image5-2.png" alt="Projet d'implantation d'une crèche - Parcelles éligibles en zone 1AU" class="img-fluid rounded shadow-sm img-placeholder mb-4">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                            
+                            <div class="highlight-quote mt-4">
+                                "Une bonne décision commence par une bonne carte: l'analyse spatiale éclaire là où l'intuition hésite"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 6 -->
+    <div class="modal fade" id="modalProjet6" tabindex="-1" aria-labelledby="modalProjet6Title" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2 text-center">
+                    <h2 class="mb-4 text-gradient" id="modalProjet6Title">Projet 6 : ArcGIS Online</h2>
+                    <h4 class="h5 mb-4" style="color: var(--primary-color);">Projet : À la découverte des ethnies du Sénégal – StoryMap ArcGIS Online</h4>
+                    <p>Dans le cadre d'un TD de géomatique, j'ai réalisé une StoryMap interactive sur la diversité ethnique du Sénégal.</p>
+                    <p>J'ai conçu une carte thématique de répartition des grandes ethnies, accompagnée d'un contenu narratif et culturel, afin de raconter l'histoire géographique et sociale de ces groupes.</p>
+                    <p class="mb-5">Ce projet illustre mes compétences en cartographie interactive, en analyse spatiale et en communication visuelle.</p>
+                    
+                    <a href="https://arcg.is/0i0qOH" target="_blank" rel="noopener noreferrer" class="btn-custom btn-lg">
+                        <i class="bi bi-map w-auto me-2"></i> Explorer la Story Map
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 7 -->
+    <div class="modal fade" id="modalProjet7" tabindex="-1" aria-labelledby="modalProjet7Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet7Title">Projet 7 : Analyse de l'offre cyclable à Massy</h2>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <p>Face à l'urgence climatique, la réduction de l'empreinte carbone urbaine est une priorité. Ce projet personnel utilise les outils SIG pour cartographier et analyser l'accessibilité du stationnement vélo à Massy.</p>
+                            <p>Importance : L'identification précise des zones sous-équipées permet d'orienter les politiques publiques vers une mobilité décarbonée. En soutenant l'alternative au véhicule individuel, ce travail démontre comment l'analyse spatiale contribue activement à la lutte contre le réchauffement climatique par une planification urbaine plus résiliente et durable.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <figure class="mb-0">
+                                <img src="image7-2.png" alt="Carte d'analyse de l'offre cyclable à Massy" class="img-fluid rounded shadow-sm img-placeholder">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 8 -->
+    <div class="modal fade" id="modalProjet8" tabindex="-1" aria-labelledby="modalProjet8Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet8Title">Projet 8 : Îlots de chaleurs en milieu urbain (ICU) - Impact d’une tour végétalisée sur le bien être thermique des habitants.</h2>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <p>Cette carte présente l'analyse de l'anomalie de température de brillance sur la commune de Milan, révélant clairement les îlots de chaleur urbains. L'étude combine les données thermiques de Landsat 8 (USGS Earth Explorer) avec la couche d'occupation du sol d'OpenStreetMap. Les résultats montrent une forte corrélation entre la densité urbaine et les anomalies thermiques positives (zones rouges/oranges), tandis que les espaces verts et les zones d'eau constituent des puits de chaleur (zones bleues). Cette analyse démontre l'importance de l'utilisation de la télédétection pour identifier les vulnérabilités thermiques urbaines et appuyer les stratégies d'adaptation climatique</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <figure class="mb-0">
+                                <img src="image8-2.png" alt="Carte d'analyse des îlots de chaleur urbains à Milan" class="img-fluid rounded shadow-sm img-placeholder">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 9 -->
+    <div class="modal fade" id="modalProjet9" tabindex="-1" aria-labelledby="modalProjet9Title" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="background-color: var(--bg-color);">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <h2 class="mb-4 text-gradient" id="modalProjet9Title">Projet 9 : Relief et réseau hydrographique du Gers</h2>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <p>Cette carte intitulée « Relief et réseaux hydrographiques du Gers » met en relation l'altitude et l'organisation du réseau de cours d'eau à l'échelle départementale. Elle combine une hypsométrie (classes d'altitude) et la représentation des axes hydrographiques afin de rendre visibles les liens entre formes du relief, pentes et direction des écoulements.</p>
+                            <p>Son intérêt est double : d'une part, elle offre une lecture synthétique du territoire (contraste altitudinaux, zones de transition, vallées principales) utile pour comprendre la structure physique du département. D'autre part, elle constitue une base d'aide à la décision pour des sujets d'aménagement et d'environnement : gestion des risques d'inondation et de ruissellement, identification des secteurs sensibles à l'érosion, analyse de l'implantation d'infrastructures ou de projets (contraintes liées au relief et aux vallées), et contextualisation d'études hydrologiques ou écologiques.</p>
+                            <p>Réalisée à partir de données IGN (BD TOPO pour l'hydrographie et BD ALTI pour le relief), cette production cartographique illustre la capacité à mobiliser des données de référence, à les croiser et à les mettre en forme pour communiquer clairement une information géographique.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <figure class="mb-0">
+                                <img src="image9-2.png" alt="Carte du relief et réseau hydrographique du Gers" class="img-fluid rounded shadow-sm img-placeholder">
+                                <figcaption class="text-center text-muted small mt-2">Réalisée par : Zackaria MANE - Octobre 2025</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="py-5 mt-5 border-top" style="background-color: var(--primary-color); border-color: rgba(0,0,0,0.1) !important;">
+        <div class="container text-center text-white">
+            <h3 class="mb-4 text-white">Zackaria MANE</h3>
+            <p class="mb-4" style="color: rgba(255,255,255,0.8);">Pour toute demande d'information ou collaboration.</p>
+            <p class="mb-5"><a href="mailto:contact@exemple.com" class="text-white text-decoration-none fw-bold"><i class="bi bi-envelope me-2"></i>Me contacter par e-mail</a></p>
+            <p class="mb-0 small" style="color: rgba(255,255,255,0.6);">© <script>document.write(new Date().getFullYear())</script> Portfolio Géomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS Externe -->
+    <script src="script.js"></script>
+</body>
+</html>
