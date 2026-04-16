@@ -5,8 +5,8 @@
     --primary-color: #5E35B1; /* Violet profond */
     --primary-glow: rgba(94, 53, 177, 0.2);
     --accent-color: #9575CD; /* Mauve lumineux */
-    --text-main: #212529; /* Gris anthracite */
-    --text-muted: #495057;
+    --text-main: #1A1A24; /* Gris très sombre, contraste élevé */
+    --text-muted: #4A4A5A; /* Gris foncé, très lisible */
     --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Cards and Elements */
 .glass-card {
-    background: var(--surface-color);
+    background: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(94, 53, 177, 0.1);
     border-radius: 20px;
@@ -146,6 +146,19 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
     height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+/* Optimization for Card Titles */
+.glass-card h3 {
+    font-size: 1.4rem; /* Légèrement plus grand */
+    font-weight: 700 !important; /* Mieux mis en évidence */
+}
+
+/* Optimization for Image Captions */
+figcaption {
+    font-size: 0.95rem !important; /* Enlève l'effet "small" trop petit */
+    font-weight: 500 !important;
+    color: #1A1A24 !important; /* Assure un gris sombre profond, bypassant text-muted */
 }
 
 .glass-card:hover {
