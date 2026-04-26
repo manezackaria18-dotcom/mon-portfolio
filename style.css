@@ -171,9 +171,9 @@ figcaption {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
-    background: #e9ecef; /* Neutral light background for empty images */
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
